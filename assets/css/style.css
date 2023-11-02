@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,3 +11,53 @@
   justify-content: space-around;
   gap: 100px;
 }
+
+.header-tittle {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-tittle h1 {
+  color:#de1623;
+  font-weight: 500;
+  font-size: 32px;
+  font-family: "Oswald";
+  text-transform: uppercase;
+}
+
+.header-tittle h1 span {
+  font-weight: 300;
+  color: #de1623;
+}
+
+.header-tittle p {
+  font-family: "Oswald";
+  color:#7d3fd4;
+  text-align: center;
+  font-weight: 200;
+  position: relative;
+  
+}
+
+.header-tittle p::after {
+  content: "";
+  background: gray;
+  width: 45px;
+  height: 1px;
+  position: absolute;
+  bottom: 13px;
+  right: 0px;
+}
+
+.header-tittle p::before {
+  content: "";
+  background: gray;
+  width: 45px;
+  height: 1px;
+  position: absolute;
+  bottom: 13px;
+  left: 0px;
+}
+
+
+
