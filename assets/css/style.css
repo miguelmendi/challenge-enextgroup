@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-around;
   gap: 100px;
+  margin: 10px 0;
 }
 
 .header-tittle {
@@ -105,6 +106,29 @@
 
 .header-bag h2 {
   color: rgb(126, 126, 126);
+}
+
+.menu {
+  display: flex;
+  background-color: #6532ac;
+  align-items: center;
+}
+
+.menu-box {
+  display: flex;
+  gap: 40px;
+}
+
+.menu-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.menu-div h4 {
+  color: #ffffff;
+  font-weight: 400;
 }
 
 
