@@ -159,5 +159,37 @@
   font-weight: 200;
 }
 
+.main-content {
+  margin-top: 50px;
+
+}
+
+.main-text h2 {
+  margin-left: 60px;
+}
+
+.main-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.main-div img {
+  display: flex;
+  max-width: 100%;
+  width: 300px;
+  margin: 0 auto;
+  
+}
+
+.main-div p {
+  text-align: center;
+}
+
+.main-img {
+  margin-top: 50px;
+}
+
 
 
