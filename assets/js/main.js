@@ -1,4 +1,7 @@
 import JSON from './potions.json' assert { type: "json" };
+console.log(JSON)
+
+
 
 const menuResponsive = document.querySelector("#menu-responsive")
 const menu = document.querySelector(".menu")
@@ -9,10 +12,3 @@ menuResponsive.addEventListener("click", () => {
  
 })
 
-function potions() {
-  fetch("potions.json").then((response) => {
-    response.json().then((potions) => {
-      console.log(potions);
-    })
-  })
-}
