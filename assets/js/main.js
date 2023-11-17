@@ -6,9 +6,10 @@ let potionsDiv = document.querySelectorAll(".main-img")
  function getId()  {
   for(var el of potionsDiv){
     el.addEventListener('click', function(){
-      const id = this.id
-      console.log(id)
-      return id
+      const myId = this.id
+      
+      console.log(myId)
+      return myId
     });
   }   
 }
