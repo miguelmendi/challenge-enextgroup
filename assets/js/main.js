@@ -1,15 +1,17 @@
 import JSON from './potions.json' assert { type: "json" };
 console.log(JSON)
 
+
 let potionsDiv = document.querySelectorAll(".main-img")
 
  function getId()  {
   for(var el of potionsDiv){
     el.addEventListener('click', function(){
-      const myId = this.id
+      let myId = this.id
+      let addJn = JSON.potions[myId]
       
-      console.log(myId)
-      return myId
+      console.log(addJn)
+      return addJn
     });
   }   
 }
@@ -20,12 +22,14 @@ getId()
  
 
 const aside = document.querySelector(".aside")
-const asideImg = document.querySelector("aside-img")
+const asideImg = document.querySelector(".aside-img")
+const asidePrice = document.querySelector(".price")
 
 function addInfos() {
   switch (getId()) {
     case 1:
-      asideImg.content = JSON.potions[1].image
+      asideImg.content = addjn[1].image
+      asidePrice.textContent = addJn[1].name
     case 2:
 
     case 3:
@@ -39,7 +43,7 @@ function addInfos() {
 
 }
 addInfos()
-getId()
+
 
 
 

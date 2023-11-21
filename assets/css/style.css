@@ -373,6 +373,17 @@
   }
 }
 
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-img img{
+  max-width: 100%;
+  width: 400px;
+}
+
 .active {
   display: flex;
 }
