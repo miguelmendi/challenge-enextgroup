@@ -384,6 +384,23 @@
   width: 400px;
 }
 
+
+.aside-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aside-h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #de1623;
+}
+
 .active {
   display: flex;
 }
