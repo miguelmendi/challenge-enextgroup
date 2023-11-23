@@ -374,13 +374,14 @@
 }
 
 .aside {
-  display: flex;
+  display: none;
   justify-content: center;
-  align-items: center;
+  
 }
 
 .aside-img img{
   max-width: 100%;
+  margin-top: 20px;
   width: 400px;
 }
 
@@ -389,12 +390,32 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: 15px;
 }
 
 .aside-h2 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
+}
+
+.aside-button button {
+  border: none;
+  padding: 10px 10px;
+  color: #ffffff;
+  background-color: orangered;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.close {
+  margin-left: 15px;
+}
+
+.close i {
+  cursor: pointer;
 }
 
 .price {

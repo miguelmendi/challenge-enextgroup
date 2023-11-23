@@ -1,6 +1,10 @@
 import JSON from './potions.json' assert { type: "json" };
 console.log(JSON)
 
+function addClassActive() {
+  aside.classList.add("active")
+  addInfos()
+}
 
 let potionsDiv = document.querySelectorAll(".main-img")
 
@@ -11,21 +15,21 @@ let potionsDiv = document.querySelectorAll(".main-img")
       let addJn = JSON.potions[myId]
       
       console.log(addJn)
+      addClassActive()
       return addJn
     });
   }   
 }
 
-
-
 getId()
  
-
 const aside = document.querySelector(".aside")
+const close = document.querySelector(".close")
 const asideImg = document.querySelector(".aside-img")
 const asidePrice = document.querySelector(".price")
 
 function addInfos() {
+  
   switch (getId()) {
     case 1:
       asideImg.content = addjn[1].image
@@ -42,10 +46,6 @@ function addInfos() {
   }
 
 }
-addInfos()
-
-
-
 
 const menuResponsive = document.querySelector("#menu-responsive")
 const menu = document.querySelector(".menu")
@@ -55,3 +55,6 @@ menuResponsive.addEventListener("click", () => {
  
 })
 
+close.addEventListener("click", ()=> {
+  aside.classList.remove("active")
+})
