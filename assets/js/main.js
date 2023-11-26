@@ -7,18 +7,8 @@ function addClassActive() {
 
 let potionsDiv = document.querySelectorAll(".main-img")
 let myId 
-let addJn
-
- //function getId()  { }
-
-//getId()
-
-
- 
 const aside = document.querySelector(".aside")
 const close = document.querySelector(".close")
-const asideImg = document.querySelector(".aside-img img")
-const asidePrice = document.querySelector(".price")
 let currentItem
 const asideTemplate = ()=> {
  return `
