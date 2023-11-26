@@ -3,49 +3,73 @@ console.log(JSON)
 
 function addClassActive() {
   aside.classList.add("active")
-  addInfos()
 }
 
 let potionsDiv = document.querySelectorAll(".main-img")
+let myId 
+let addJn
 
- function getId()  {
-  for(var el of potionsDiv){
-    el.addEventListener('click', function(){
-      let myId = this.id
-      let addJn = JSON.potions[myId]
-      
-      console.log(addJn)
-      addClassActive()
-      return addJn
-    });
-  }   
-}
+ //function getId()  { }
 
-getId()
+//getId()
+
+
  
 const aside = document.querySelector(".aside")
 const close = document.querySelector(".close")
-const asideImg = document.querySelector(".aside-img")
+const asideImg = document.querySelector(".aside-img img")
 const asidePrice = document.querySelector(".price")
-
-function addInfos() {
-  
-  switch (getId()) {
-    case 1:
-      asideImg.content = addjn[1].image
-      asidePrice.textContent = addJn[1].name
-    case 2:
-
-    case 3:
-
-    case 4:
-
-    case 5:
-
-    case 6:
-  }
-
+let currentItem
+const asideTemplate = ()=> {
+ return `
+    <div class="aside-img">
+      <img  src="../assets/images/${currentItem.image}" alt="">
+    </div>
+    <div class="aside-content">
+      <div class="aside-content-tittle">
+        <h2 class="aside-h2">${currentItem.name}</h2>
+      </div> 
+      <div class="aside-text-effect">
+        <h2 class="aside-h2">Use/Effect</h2>
+        <p>${currentItem.effect}</p>
+      </div>
+      <div class="aside-ingredients">
+        <h2 class="aside-h2">Ingredients</h2>
+        ${currentItem.ingredients.map((i) => {
+          return `<p>${i}</p>`
+        }).join('')}
+        
+      </div>
+      <div class="aside-price">
+        <h2 class="aside-h2">Price</h2>
+        <span class="price">${currentItem.price}</span>
+      </div>
+      <div class="aside-button">
+        <button>add to cart</button>
+      </div>
+    </div>
+    <div class="close">
+      <i class='bx bx-x'></i>
+    </div>
+`
 }
+
+
+
+potionsDiv.forEach((e) => {
+  e.addEventListener("click", function() {
+    myId = this.dataset.id 
+    currentItem = JSON.potions[myId]
+    console.log(currentItem)
+    aside.innerHTML = asideTemplate()
+    addClassActive()
+    asideTemplate()
+    
+  })
+  
+})
+
+
 
 const menuResponsive = document.querySelector("#menu-responsive")
 const menu = document.querySelector(".menu")
