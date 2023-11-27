@@ -376,7 +376,15 @@
 .aside {
   display: none;
   justify-content: center;
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  transform: translate(0%, 50%);
+  max-width: 700px;
+  margin: auto;
 }
 
 .aside-img img{

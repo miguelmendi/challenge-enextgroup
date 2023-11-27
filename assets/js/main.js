@@ -50,7 +50,6 @@ potionsDiv.forEach((e) => {
   e.addEventListener("click", function() {
     myId = this.dataset.id 
     currentItem = JSON.potions[myId]
-    console.log(currentItem)
     aside.innerHTML = asideTemplate()
     addClassActive()
     asideTemplate()
@@ -70,5 +69,6 @@ menuResponsive.addEventListener("click", () => {
 })
 
 close.addEventListener("click", ()=> {
-  aside.classList.remove("active")
+  console.log("funcionando")
+  aside.classList.toggle("active")
 })
