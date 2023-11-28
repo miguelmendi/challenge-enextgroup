@@ -53,7 +53,7 @@ potionsDiv.forEach((e) => {
     aside.innerHTML = asideTemplate()
     addClassActive()
     asideTemplate()
-    
+    closeA()
   })
   
 })
@@ -68,7 +68,15 @@ menuResponsive.addEventListener("click", () => {
  
 })
 
-close.addEventListener("click", ()=> {
-  console.log("funcionando")
-  aside.classList.toggle("active")
-})
+function closeA() {
+  if(aside.classList.contains("active")) {
+    close.addEventListener("click", ()=> {
+      console.log("funcionando")
+      aside.classList.remove("active")
+    })
+  }
+  
+}
+
+
+
