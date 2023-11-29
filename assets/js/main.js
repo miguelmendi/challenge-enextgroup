@@ -1,16 +1,14 @@
 import JSON from './potions.json' assert { type: "json" };
-console.log(JSON)
-
-function addClassActive() {
-  aside.classList.add("active")
-}
-
-let potionsDiv = document.querySelectorAll(".main-img")
-let myId 
+const menuResponsive = document.querySelector("#menu-responsive")
+const menu = document.querySelector(".menu")
 const aside = document.querySelector(".aside")
-const close = document.querySelector(".close")
+const insertAside = document.querySelector(".insert-aside")
+let potionsDiv = document.querySelectorAll(".main-img")
+let close = document.querySelector(".close")
+let myId 
 let currentItem
-const asideTemplate = ()=> {
+
+const asideTemplate = () => {
  return `
     <div class="aside-img">
       <img  src="../assets/images/${currentItem.image}" alt="">
@@ -28,7 +26,6 @@ const asideTemplate = ()=> {
         ${currentItem.ingredients.map((i) => {
           return `<p>${i}</p>`
         }).join('')}
-        
       </div>
       <div class="aside-price">
         <h2 class="aside-h2">Price</h2>
@@ -38,44 +35,34 @@ const asideTemplate = ()=> {
         <button>add to cart</button>
       </div>
     </div>
-    <div class="close">
-      <i class='bx bx-x'></i>
-    </div>
 `
 }
-
 
 
 potionsDiv.forEach((e) => {
   e.addEventListener("click", function() {
     myId = this.dataset.id 
     currentItem = JSON.potions[myId]
-    aside.innerHTML = asideTemplate()
+    insertAside.innerHTML = asideTemplate()
     addClassActive()
     asideTemplate()
-    closeA()
+    
   })
   
 })
-
-
-
-const menuResponsive = document.querySelector("#menu-responsive")
-const menu = document.querySelector(".menu")
 
 menuResponsive.addEventListener("click", () => {
     menu.classList.toggle("active")
  
 })
 
-function closeA() {
-  if(aside.classList.contains("active")) {
-    close.addEventListener("click", ()=> {
-      console.log("funcionando")
-      aside.classList.remove("active")
-    })
-  }
+ 
+close.addEventListener("click", ()=> {
+  aside.classList.remove("active")
+})
   
+function addClassActive() {
+  aside.classList.add("active")
 }
 
 
