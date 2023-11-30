@@ -3,6 +3,7 @@ const menuResponsive = document.querySelector("#menu-responsive")
 const menu = document.querySelector(".menu")
 const aside = document.querySelector(".aside")
 const insertAside = document.querySelector(".insert-aside")
+const body = document.querySelector(".body")
 let potionsDiv = document.querySelectorAll(".main-img")
 let close = document.querySelector(".close")
 let myId 
@@ -63,6 +64,7 @@ close.addEventListener("click", ()=> {
   
 function addClassActive() {
   aside.classList.add("active")
+  body.classList.add("opacity")
 }
 
 

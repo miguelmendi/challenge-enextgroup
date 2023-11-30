@@ -439,3 +439,11 @@
   display: flex;
 }
 
+.opacity {
+  opacity: 0.5;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
