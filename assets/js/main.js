@@ -64,7 +64,7 @@ close.addEventListener("click", ()=> {
   
 function addClassActive() {
   aside.classList.add("active")
-  body.classList.add("opacity")
+  //body.classList.add("opacity")
 }
 
 
